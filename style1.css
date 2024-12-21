@@ -215,4 +215,55 @@ body, html {
       font-size: 1.5rem;
     }
   }
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-y: auto; /* Ensures vertical scrolling */
+}
+
+/* Scrollbar styling for modern browsers */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #2d89ef; /* Scrollbar color */
+  border-radius: 10px; /* Round edges */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #1c6fde; /* Scrollbar color on hover */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Background color of the scrollbar track */
+}
+
+/* Add a vertical scroll specifically to categories */
+.categories-wrapper {
+  max-height: 70vh; /* Limit the height to enable scrolling if content overflows */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Customize scrollbar for .categories-wrapper */
+.categories-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categories-wrapper::-webkit-scrollbar-thumb {
+  background: #2d89ef;
+  border-radius: 8px;
+}
+
+.categories-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #1c6fde;
+}
+
+.categories-wrapper::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
   
