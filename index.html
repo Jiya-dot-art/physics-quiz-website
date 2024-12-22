@@ -1,173 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\HP\Desktop\College Resources Website\apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#2d89ef" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="style1.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Quiz</title>
-    <meta
-      name="description"
-      content="Test your knowledge of physics with our interactive quiz website. Explore sections on mechanics, thermodynamics, electromagnetism, and modern physics."
-    />
-    <meta
-      name="keywords"
-      content="Physics Quiz, Acoustics,Ultrasonic and Dielectrics Quiz, Thermodynamics Quiz, Electromagnetism Quiz, Modern Physics Questions, Science Quiz Website, Physics Knowledge Test, Interactive Quiz"
-    />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="screen-backdrop"></div>
-      <div class="home-screen screen">
-        <div class="head-wrapper">
-          <div class="menu-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-              />
-            </svg>
-          </div>
-          <div class="welcome">
-            <div class="content">
-              <h1>Welcome to Physics Quiz</h1>
-              <p>Test your knowledge in various sections of physics!</p>
-            </div>
-          </div>
-        </div>
-        <div class="categories-wrapper">
-          <div class="categories">
-            <div class="category">
-              <div class="left">
-                <img src="mechanics.png" alt="Mechanics" />
-                <div class="content">
-                  <h1>Acoustics,Ultrasonic and Dielectrics</h1>
-                  <p>30 Questions</p>
-                </div>
-              </div>
-              <div class="options">
-                <button class="start-btn" onclick="startQuiz('Acoustics,Ultrasonic and Dielectrics')">Start Quiz</button>
-              </div>
-            </div>
-            <div class="category">
-              <div class="left">
-                <img src="thermodynamics.png" alt="Thermodynamics" />
-                <div class="content">
-                  <h1>Engineering Optics</h1>
-                  <p>30 Questions</p>
-                </div>
-              </div>
-              <div class="options">
-                <button class="start-btn" onclick="startQuiz('Engineering Optics')">Start Quiz</button>
-              </div>
-            </div>
-            <div class="category">
-              <div class="left">
-                <img src="electromagnetism.png" alt="Electromagnetism" />
-                <div class="content">
-                  <h1>Quantum Mechanics</h1>
-                  <p>30 Questions</p>
-                </div>
-              </div>
-              <div class="options">
-                <button class="start-btn" onclick="startQuiz('Quantum Mechanics')">Start Quiz</button>
-              </div>
-            </div>
-            <div class="category">
-              <div class="left">
-                <img src="modernphysics.png" alt="Modern Physics" />
-                <div class="content">
-                  <h1>Crystal Structure and Nuclear Physics</h1>
-                  <p>30 Questions</p>
-                </div>
-              </div>
-              <div class="options">
-                <button class="start-btn" onclick="startQuiz('Crystal Structure and Nuclear Physics')">Start Quiz</button>
-              </div>
-            </div>
-            <div class="category">
-              <div class="left">
-                <img src="modernphysics.png" alt="Modern Physics" />
-                <div class="content">
-                  <h1>Physics of Advanced Materials</h1>
-                  <p>30 Questions</p>
-                </div>
-              </div>
-              <div class="options">
-                <button class="start-btn" onclick="startQuiz('Physics of Advanced Materials')">Start Quiz</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="quiz-screen screen">
-        <div class="head-wrapper">
-          <div class="back-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-              />
-            </svg>
-          </div>
-          <div class="options">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="quiz-details">
-          <h1 id="quiz-title">Acoustics,Ultrasonic and Dielectrics</h1>
-          <div id="question-section">
-            <h2 id="question">What is Newton's First Law?</h2>
-            <div class="options">
-              <button class="option" onclick="checkAnswer(this)">Option 1</button>
-              <button class="option" onclick="checkAnswer(this)">Option 2</button>
-              <button class="option" onclick="checkAnswer(this)">Option 3</button>
-              <button class="option" onclick="checkAnswer(this)">Option 4</button>
-            </div>
-          </div>
-          <div id="result-section" style="display:none;">
-            <h2 id="result">You scored 8/10</h2>
-            <button class="restart-btn" onclick="restartQuiz()">Restart Quiz</button>
-          </div>
-        </div>        
-      </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .home-screen, .quiz-screen, .result-screen {
+            padding: 20px;
+        }
+        .home-screen, .quiz-screen, .result-screen {
+            display: none;
+        }
+        .home-screen {
+            display: block;
+        }
+        .category-button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .category-button:hover {
+            background-color: #0056b3;
+        }
+        .option {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .option.correct {
+            background-color: green;
+        }
+        .option.incorrect {
+            background-color: red;
+        }
+        .stats {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-screen">
+        <h1>Welcome to the Physics Quiz</h1>
+        <p>Select a category to start:</p>
+        <button class="category-button" onclick="startQuiz('Acoustics,Ultrasonic and Dielectrics')">Acoustics,Ultrasonic and Dielectrics</button>
+        <button class="category-button" onclick="startQuiz('Engineering Optics')">Engineering Optics</button>
+        <button class="category-button" onclick="startQuiz('Quantum Mechanics')">Quantum Mechanics</button>
+        <button class="category-button" onclick="startQuiz('Crystal Structure and Nuclear Physics')">Crystal Structure and Nuclear Physics</button>
+        <button class="category-button" onclick="startQuiz('Physics of Advanced Materials')">Physics of Advanced Materials</button>
     </div>
 
-    <script src="quiz-script.js"></script>
-  </body>
+    <div class="quiz-screen">
+        <div class="stats">
+            <p>Total Questions: <span id="total-questions"></span></p>
+            <p>Questions Left: <span id="questions-left"></span></p>
+            <p>Correct Attempts: <span id="correct-attempts"></span></p>
+            <p>Incorrect Attempts: <span id="incorrect-attempts"></span></p>
+        </div>
+        <h2 id="quiz-title"></h2>
+        <p id="question"></p>
+        <div class="options"></div>
+    </div>
+
+    <div class="result-screen">
+        <h2>Quiz Summary</h2>
+        <p id="summary"></p>
+        <button onclick="returnToHome()">Back to Home</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
 </html>
